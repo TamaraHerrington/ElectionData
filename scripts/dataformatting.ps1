@@ -1,13 +1,31 @@
 
 
 ##get 10 names from the csv list 
-$tennames = Get-Content -Path .\data_csv\membersofparliament.csv -TotalCount 10 
+$n = Get-Content -Path ".\data_csv\membersofparliament.csv" -TotalCount 1
 
-##idk wtf she's doing but its not what i want
-foreach($name in $tennames){
-    Write-Host "- $tennames.ToLower()"
-    #take first name and last name - format - and then output as key:value pair
+$n
+
+
+##do loop to search for name groupings?
+
+#move the while loop starter OUT OF THE LOOP 
+ $a = 1
+
+do{
+    $names = Get-Content -Path ".\data_csv\membersofparliament.csv" -TotalCount 1
+
+    Write-Host  $names.toLower()
+    $a++
 }
-$tennames
+while($a -le 10)
+#TODO - add in the movenext bit - might need to reformat this do loop into a foreach but we move
 
-##foreach loop to search for name groupings?
+
+# $a = 1 
+# Do
+# {
+#  "Starting Loop $a"
+#  $a
+#  $a++
+#  "Now `$a is $a"
+# } While ($a -le 5)
