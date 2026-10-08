@@ -20,6 +20,7 @@ do{
 while($a -le 10)
 #TODO - add in the movenext bit - might need to reformat this do loop into a foreach but we move
 
+#THIS IS ONLY OUTPUTTING FIRST NAME, LAST NAME BECAUSE IT'S NOT MOVING TO THE NEXT LINE YET!!
 
 # $a = 1 
 # Do
