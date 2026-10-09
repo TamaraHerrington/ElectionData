@@ -3,14 +3,27 @@
 $Header = 'LastName', 'FirstName'
 
 ##using a test file to stop killing terminal everytime an error happens
-$partydata = Import-Csv -Path ".\data_csv\membersofparliamenttest.csv" -Header $Header
+$partydata = Import-Csv -Path ".\data_csv\membersofparliament.csv" -Header $Header | Group-Object -Property LastName
 
-foreach($data in $partydata){
-    $FN = $data.FirstName
-    $LN = $data.LastName
-    "MP is: $FN $LN" 
-}
 
+##Where-Object LastName -eq "Alexander"
+
+#dont need write host!
+ $partydata
+
+# foreach($data in $partydata){
+#     $FN = $data.FirstName
+#     $LN = $data.LastName
+#     "MP is: $FN $LN" 
+# }
+
+##doesnt want to work??
+
+
+##-Property $LastName | Where-Object {$LastName.Count -gt 1} 
+
+
+Write-Host $grouped
 
 
 
