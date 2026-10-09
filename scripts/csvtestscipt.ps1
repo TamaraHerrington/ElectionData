@@ -3,13 +3,14 @@
 $Header = 'LastName', 'FirstName'
 
 ##using a test file to stop killing terminal everytime an error happens
-$partydata = Import-Csv -Path ".\data_csv\membersofparliament.csv" -Header $Header | Group-Object -Property LastName
+$groupedpartydataFN = Import-Csv -Path ".\data_csv\membersofparliament.csv" -Header $Header | Group-Object -Property FirstName
+$groupedpartydataLN = Import-Csv -Path ".\data_csv\membersofparliament.csv" -Header $Header | Group-Object -Property LastName
 
 
 ##Where-Object LastName -eq "Alexander"
 
 #dont need write host!
- $partydata
+ $groupedpartydataFN[3].Group
 
 # foreach($data in $partydata){
 #     $FN = $data.FirstName
