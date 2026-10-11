@@ -1,6 +1,13 @@
-$Header = 'LastName', 'FirstName'
-
+####################################################################################################
+##                Working on getting the hang of writing in PS
+## file is to be eventually deleted
 ##using a test file to stop killing terminal everytime an error happens
+####################################################################################################
+Set-StrictMode -Version Latest
+
+$Header = 'LastName', 'FirstName' #set headers to make it easier to call properties on objects
+
+#
 $groupedpartydataFN = Import-Csv -Path ".\data_csv\membersofparliament.csv" -Header $Header | Group-Object -Property FirstName
 $groupedpartydataLN = Import-Csv -Path ".\data_csv\membersofparliament.csv" -Header $Header | Group-Object -Property LastName
 
