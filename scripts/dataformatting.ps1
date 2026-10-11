@@ -1,6 +1,8 @@
 
 
 ##get 10 names from the csv list 
+
+##this wants to be get-csv bc get-content might not be creating the object that i think it is
 $n = Get-Content -Path ".\data_csv\membersofparliament.csv" -TotalCount 1
 
 $n
